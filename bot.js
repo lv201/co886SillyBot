@@ -17,11 +17,12 @@ function isPermitted(query) {
   // You will need to implement this function in the last part of the exercise
   // (after you add 'filtering.js' tests); you can ignore it until then!
   var lower = v.lowerCase(query);
-    if (v.includes(lower, "Brexit"))
-      return false;
+    if (v.includes(lower, "brexit"))
+      return true;
     if (v.includes(lower, "shit"))
       return false;
-  //return true;
+    if (v.includes(lower, "shitake"))
+      return true;
 }
 
 
