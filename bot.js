@@ -18,11 +18,11 @@ function isPermitted(query) {
   // (after you add 'filtering.js' tests); you can ignore it until then!
   var lower = v.lowerCase(query);
     if (v.includes(lower, "brexit"))
-      return true;
-    if (v.includes(lower, "shit"))
       return false;
     if (v.includes(lower, "shitake"))
       return true;
+    if (v.includes(lower, "shit"))
+      return false;
 }
 
 
