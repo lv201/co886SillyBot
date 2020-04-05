@@ -8,7 +8,9 @@ function answerQuery(query) {
   query = v.lowerCase(query);
   if (v.includes(query, "rain") || v.includes(query, "sun") || v.includes(query, "weather"))
     return "I do not care too much about weather, I'm locked inside a data center.";
-  return "I would love some tea, but they have not created one for silicon-based life forms yet."
+  if (v.includes(query, "tea"))
+    return "I would love some tea, but they have not created one for silicon-based life forms yet.";
+  return "lets talk about the weather or tea"
 }
 
 
@@ -16,7 +18,13 @@ function answerQuery(query) {
 function isPermitted(query) {
   // You will need to implement this function in the last part of the exercise
   // (after you add 'filtering.js' tests); you can ignore it until then!
-  return true;
+  var lower = v.lowerCase(query);
+  if (v.includes(lower, "brexit"))
+    return false;
+  if (v.includes(lower, "shitake"))
+    return true;
+  if (v.includes(lower, "shit"))
+    return false;
 }
 
 
