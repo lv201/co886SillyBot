@@ -25,6 +25,7 @@ function isPermitted(query) {
     return true;
   if (v.includes(lower, "shit"))
     return false;
+  return true
 }
 
 
